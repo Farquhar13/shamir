@@ -32,7 +32,7 @@ import javax.annotation.Nonnegative;
  * {@code x} + 1.
  *
  * @see <a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">Shamir's Secret
- *     Sharing</a>
+ *     Sharing</as>
  * @see <a href="http://www.cs.utsa.edu/~wagner/laws/FFM.html">The Finite Field {@code GF(256)}</a>
  */
 @AutoValue
