@@ -28,7 +28,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Shamir Secret Sharing Site</h1>
 
 
         <p align="center" font-size="50">Welcome To Invisible Inc.</p><br>
