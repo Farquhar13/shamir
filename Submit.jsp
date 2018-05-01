@@ -9,13 +9,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <script language="JavaScript">
+        function tryShare(){
+            var share = document.getElementById("userShare").value;
+            if(share == null){
+                alert("Please enter a share")
+            } else {
+                //This is where the JSP has to call the java code
+            }
+            alert("Someone pressed the try share button");
+        }
+
+
+
+    </script>
         <title>JSP Page</title>
-        
-        string message = driver.testCall();
-        
-        
     </head>
     <body>
         <h1>Hello World!</h1>
+
+
+        <p align="center" font-size="50">Welcome To Invisible Inc.</p><br>
+
+        <form1>
+            Enter your secret share:<br>
+            <input type="text" id="userShare"><br>
+            <button onclick="tryShare()">Try a share</button><input type="reset">
+        </form1>
+
+
+
     </body>
 </html>
