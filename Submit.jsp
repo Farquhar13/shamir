@@ -12,6 +12,10 @@
 
 
     <script language="JavaScript">
+
+        <%@page import="com.codahale.shamir.driver" %>
+
+
         function tryShare(){
             var share = document.getElementsByName("userShare").value;
             var num = document.getElementsByName("shareNum").value;
@@ -19,7 +23,9 @@
                 alert("Please enter a share")
             } else {
                 //This is where the JSP has to call the java code
-
+                <%
+                    String stringFromJava = driver.addShare(num, share);
+                %>
             }
             alert("Someone pressed the try share button");
         }
