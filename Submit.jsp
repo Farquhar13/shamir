@@ -13,11 +13,13 @@
 
     <script language="JavaScript">
         function tryShare(){
-            var share = document.getElementById("userShare").value;
+            var share = document.getElementsByName("userShare").value;
+            var num = document.getElementsByName("shareNum").value;
             if(share == null){
                 alert("Please enter a share")
             } else {
                 //This is where the JSP has to call the java code
+
             }
             alert("Someone pressed the try share button");
         }
@@ -35,7 +37,9 @@
 
         <form1>
             Enter your secret share:<br>
-            <input type="text" id="userShare"><br>
+            <input type="text" name="userShare"><br>
+            Enter the number of your share:
+            <input type="text" name="shareNum"><br>
             <button onclick="tryShare()">Try a share</button><input type="reset">
         </form1>
 
