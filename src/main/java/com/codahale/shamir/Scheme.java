@@ -85,6 +85,7 @@ public abstract class Scheme {
   @CheckReturnValue
   public Map<Integer, byte[]> split(byte[] secret) {
     // generate part values
+    //System.out.println("secret.length: " + secret.length);
     final byte[][] values = new byte[n()][secret.length];
     for (int i = 0; i < secret.length; i++) {
       // for each byte, generate a random polynomial, p
@@ -92,6 +93,7 @@ public abstract class Scheme {
       for (int x = 1; x <= n(); x++) {
         // each part's byte is p(partId)
         values[x - 1][i] = GF256.eval(p, (byte) x);
+        //System.out.println(values[x - 1][i]);
       }
     }
 
@@ -99,6 +101,7 @@ public abstract class Scheme {
     final Map<Integer, byte[]> parts = new HashMap<>(n());
     for (int i = 0; i < values.length; i++) {
       parts.put(i + 1, values[i]);
+      //System.out.println("values: " + values[i]);
     }
     return parts;
   }
