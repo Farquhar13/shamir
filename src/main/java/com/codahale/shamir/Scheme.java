@@ -100,7 +100,7 @@ public abstract class Scheme {
     for (int i = 0; i < values.length; i++) {
       parts.put(i + 1, values[i]);
     }
-    return Collections.unmodifiableMap(parts);
+    return parts;
   }
 
   /**
