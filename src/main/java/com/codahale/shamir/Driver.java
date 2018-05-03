@@ -4,10 +4,11 @@ import com.codahale.shamir.Scheme;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.io.*;
 
-public class driver {
+public class Driver {
 
-    public Map<Integer, byte[]> collected = new HashMap<Integer, byte[]>();
+    public static Map<Integer, byte[]> collected = new HashMap<Integer, byte[]>();
     public static final int n = 5;
     public static final int k = 3;
 
@@ -59,7 +60,7 @@ public class driver {
      * @param b the share value
      * @return either the secret in form of a string or the number of shares entered
      */
-    public String addShare(int i, byte[] b) {
+    public static String addShare(int i, byte[] b) {
 
         collected.put(i,b);
 
