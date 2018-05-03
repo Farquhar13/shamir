@@ -60,9 +60,10 @@ public class Driver {
      * @param b the share value
      * @return either the secret in form of a string or the number of shares entered
      */
-    public static String addShare(int i, byte[] b) {
+    public static String addShare(String i, String b) {
 
-        collected.put(i,b);
+        byte[] convertedByte = toBytes(b);                  //send b to be converted to a byte[]
+        collected.put(Integer.parseInt(i) ,convertedByte);  //i must be parsed to an int
 
         if(collected.size() < k){
             return(collected.size() + " out of " + k + " shares needed.");
@@ -74,14 +75,28 @@ public class Driver {
     }
 
     /*
-     * toBytes is supposed to find a way to convert a string into a byte so that it can be added
+     * toBytes is supposed to find a way to convert a string into a byte array so that it can be added
      * to the map object
      *
+     * uncertain at this time if the bytes array is taking the the char as literals
+     * this is the most drastic issue with the program currently
+     *
      * @param input the string taken in by the program
-     * @return the byte value of the converted string
+     * @return the byte[] value of the converted string
      */
-    public byte[] toBytes(String input){
-        //this is empty for this moment
-        return null;
+    public static byte[] toBytes(String input){
+        byte[] newNewByte = null;
+        byte newByte = 0;
+        if(input.equals(null)) {
+            return newNewByte;
+        } else {
+            for (int count = 0; count <= input.length(); count++) {
+                char c = input.charAt(count);
+                newByte = (byte)c;
+
+                newNewByte[count] = newByte;
+            }
+            return newNewByte;
+        }
     }
 }
