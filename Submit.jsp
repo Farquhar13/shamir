@@ -25,11 +25,11 @@
             } else {
                 //This is where the JSP has to call the java code
                 <%
-                    String num = request.getParameter("shareNum");
-                    String share = request.getParameter("userShare");
-                    String stringFromJava = Driver.addShare(num, share);
+                    String num = request.getParameter("shareNum");          //java scriptlet is having difficulty
+                    String share = request.getParameter("userShare");       //taking the input from html
+                    String stringFromJava = Driver.addShare("1", "1de0aca6");   //this is hardcoded as an example to hopefully demonstrate
                 %>
-                alert(stringFromJava);
+                //alert(stringFromJava);
                 out.println(stringFromJava);
 
             }
