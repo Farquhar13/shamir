@@ -17,6 +17,7 @@
 
 
         function tryShare(){
+
             var share = document.getElementsByName("userShare").value;
             var num = document.getElementsByName("shareNum").value;
             if(share == null){
@@ -24,9 +25,13 @@
             } else {
                 //This is where the JSP has to call the java code
                 <%
+                    String num = request.getParameter("shareNum");
+                    String share = request.getParameter("userShare");
                     String stringFromJava = Driver.addShare(num, share);
                 %>
                 alert(stringFromJava);
+                out.println(stringFromJava);
+
             }
             alert("Someone pressed the try share button");
         }
@@ -42,7 +47,7 @@
 
         <p align="center" font-size="50">Welcome To Invisible Inc.</p><br>
 
-        <form1>
+        <form1 method="get" action="http://localHost:8080/ShamirSecretShare2018/index/Submit.jsp">
             Enter your secret share:<br>
             <input type="text" name="userShare"><br>
             Enter the number of your share:

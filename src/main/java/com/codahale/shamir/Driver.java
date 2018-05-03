@@ -40,16 +40,6 @@ public class Driver {
         System.out.println("recovered secret: " + new String(recovered, StandardCharsets.UTF_8));
     }
 
-        /*
-    final Map<Integer, byte[]> shares = new HashMap<>(5);
-    public void reconstruct(int key, byte[] share){
-        shares.replace(key, share);
-        k_check = 0;
-        for (i=0; i <=shares.length(
-            //check how may shares are in the map object, if greater than k, send to scheme.join
-        }
-    }
-*/
 
     /*
      * addShare takes an integer and a share value from the javascript input and adds it to the collected
@@ -73,6 +63,7 @@ public class Driver {
         }
 
     }
+
 
     /*
      * toBytes is supposed to find a way to convert a string into a byte array so that it can be added
