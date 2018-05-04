@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -7,18 +8,28 @@ and open the template in the editor.
 
     
         <title>Secret Sharing Scheme</title>
+
+	<body>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
-        
+	<head align="center">Welcome to Invisible Inc. !</head>
+    	
+	<p align="center">
+	Welcome to a Software Engineering project by Danielle, Collin, and Matt. Our project is an implemenation of the Shamir Secret Sharing Scheme using a web interface.<br>
+	What is the Shamir Scheme you ask? Good question, thanks for asking. Shamir's scheme is an encryption algorithm which segments a piece of data,<br>
+	in our case a string of text characters into coordinates on a polynomial function. The segments are encryped and can be distributed among individuals who then need to each enter their respective parts of the secret to reconstruct it.<br>
+	With the Shamir scheme, many quantities of parts can be generated from the secret, and a minimum number of parts can be specified as needed in order to rebuild the secret. The secret is not <br>
+	Stored within the program or database once it is encrypted, and must be mathematically uncovered by Lagrange interpolation in order to be revealed again.<br>
+	<br>We hope this demonstration is informative, thanks for visiting!
+	</p>		
+	
+	<br>
+	 <a align="center" href="http://localHost:8080/ShamirSecretSharing2018/Submit.jsp/">Try it yourself</a> 	
+	        
         <form action="ShamirsSecretSharingScheme.php" method="POST"/>
-            
-              
-             <p>Key: <input type="password" name="Key" value="Key" size="30" /></p>
-             <input type="submit" value ="submit"/>
-             <input type="reset" value="Clear" name="Clear" />
-            
-            </form>
-    
+	</form>
+	</body>
 
+
+</html>
