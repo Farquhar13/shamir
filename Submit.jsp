@@ -5,15 +5,21 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page session="true" language="java" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
+
+
     <script language="JavaScript">
 
+
+
         <%@page import="com.codahale.shamir.Driver" %>
+        <%@page import="java.lang.*"%>
 
 
         function tryShare(){
@@ -28,12 +34,13 @@
                     String num = request.getParameter("shareNum");          //java scriptlet is having difficulty
                     String share = request.getParameter("userShare");       //taking the input from html
                     String stringFromJava = Driver.addShare("1", "1de0aca6");   //this is hardcoded as an example to hopefully demonstrate
+                    out.println(stringFromJava);
                 %>
                 //alert(stringFromJava);
-                out.println(stringFromJava);
+                //out.println(stringFromJava);
 
             }
-            alert("Someone pressed the try share button");
+            alert("You've entered a share!");
         }
 
 
@@ -52,7 +59,8 @@
             <input type="text" name="userShare"><br>
             Enter the number of your share:
             <input type="text" name="shareNum"><br>
-            <button onclick="tryShare()">Try a share</button><input type="reset">
+            <button onclick="tryShare()">Try a share</button><br>
+            <input type="reset">
         </form1>
 
 
